@@ -87,6 +87,8 @@ Decoder? findDecoderForData(List<int> data) {
 /// file and using that decoder to decode the file into a single frame [Image].
 Image? decodeImage(List<int> data) {
   final decoder = findDecoderForData(data);
+  print(decoder);
+  print(decoder.runtimeType);
   if (decoder == null) {
     return null;
   }
